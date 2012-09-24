@@ -98,13 +98,19 @@
   @include single-transition(margin-left, .4s);
   height: 100%;
   position: fixed;
-  top: 0;
+  top: 30px;
   left: 100%;
   z-index: 500;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 
   &.annotator-collapsed { 
     margin-left: -$heatmap-width - 10px;
+    #gutter {
+      margin-left: $heatmap-width + 10px;
+    }
+    #toolbar .tab {
+      @include icon("tri-left.png");
+    }
   }
 }
 
