@@ -369,19 +369,32 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 }
 
 .framebutton {
-  border-right: 1px solid $gray;
+  border-left: 1px solid $gray-lighter;
+  border-right: 1px solid $gray-lighter;
   display: inline-block;
   height: 100%;
-  padding-right: .5em;
-  padding-left: .5em;
+  padding-right: 1em;
+  padding-left: 1em;
   padding-top: .25em;
   position: relative;
+  display: inline-block;
+  cursor: pointer;
+  & * {
+    text-decoration: none;
+  }
+  &.right {
+    float: right;
+    border-right: none;
+  }
+  &.left {
+    float: left;
+    border-left: none;
+  }
   &.pointy {
-    margin-right: 7px;
     &:after {
       @include rotate(45deg);
       @include background-image(
-        linear-gradient(top left, rgb(65, 65, 65) 0%, rgb(25, 25, 25) 100%));
+        linear-gradient(top left, rgb(55, 55, 55) 0%, rgb(15, 15, 15) 100%));
       border-top: 1px solid $gray-light;
       border-right: 1px solid $gray-light;
       content: "";
@@ -392,7 +405,22 @@ svg { -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
       top: 10px;
       width: 7px;
     }
+    &:hover {
+      &:after {
+        @include background-image(
+          linear-gradient(top left, rgb(75, 75, 75) 0%, rgb(75, 75, 75) 45%, rgb(0, 0, 0) 55%, rgb(0, 0, 0) 100%));          
+      }
+    }
   }
+  &:hover {
+    @include background-image(
+      linear-gradient(top, rgb(15, 15, 15) 0%, rgb(75, 75, 75) 48%, rgb(0, 0, 0) 52%, rgb(25, 25, 25) 100%));  
+  }
+}
+
+.frameclose {
+  @include linkbutton-right;
+  background-image: url("/images/delete_white.png");
 }
 
 #pageframe {

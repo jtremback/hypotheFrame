@@ -1,10 +1,14 @@
 - content_for :head do
-  %title Wikipad: The New Tablet/Game Console
+  %title Structure, function and diversity of the healthy human microbiome :  Nature :  Nature Publishing Group
 #frametopper
-  .framebutton.pointy
-    %span hypothes<span class="red">.</span>is
-  readwriteweb.com - Wikipad: The New Tablet/Game Console
-  %a(href="http://www.readwriteweb.com/archives/wikipad-the-new-tablet-game-console.php") remove frame
+  .framebutton.pointy.left(style="z-index: 3;")
+    %span hypothes<span class="brightred">.</span>is
+  .framebutton.left.pointy(style="z-index: 2;")
+    %a nature.com
+  .framebutton.left
+    %a Structure, function and diversity of the healthy human microbiome :  Nature :  Nature Publishing Group
+  .framebutton.right
+    %a.frameclose(href="http://www.nature.com/nature/journal/v486/n7402/full/nature11234.html") remove frame
 #pageframe
-  %iframe#mainiframe(src="http://www.readwriteweb.com/archives/wikipad-the-new-tablet-game-console.php")
+  %iframe#mainiframe(src="http://www.nature.com/nature/journal/v486/n7402/full/nature11234.html")
   = partial "sidebar.haml"
