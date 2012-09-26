@@ -1,5 +1,5 @@
 @import 'compass/css3';
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Source+Sans+Pro|PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,700,400|Merriweather|Source+Sans+Pro|PT+Serif);
 
 
 // GRAYS
@@ -104,13 +104,13 @@ $gutter: 24;
 
 //ANNOTATOR TEXT STYLES
 @mixin primarytext {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.3em;
 }
 
 @mixin secondarytext {
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @mixin tertiarytext {
