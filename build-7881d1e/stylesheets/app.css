@@ -1059,7 +1059,7 @@ svg {
   background-position: right;
   padding-left: 0;
   padding-right: 1.3em;
-  background-image: url("/images/delete_white.png"); }
+  background-image: url("../images/delete_white.png"); }
 
 /* line 426, app.css.scss */
 #pageframe {
